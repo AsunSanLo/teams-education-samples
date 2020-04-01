@@ -1,0 +1,37 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+      {
+        "type": "Container",
+        "items": [
+          {
+            "type": "TextBlock",
+            "size": "medium",
+            "isSubtle": true,
+            "text": "Selecciona el siguiente temario a compartir:"
+          }
+        ]
+      },
+      {
+        "type": "Input.ChoiceSet",
+        "id": "planetSelector",
+        "choices": [
+          { "value": "Álgebra lineal", "title": "Álgebra lineal" },
+          { "value": "Cálculo diferencial", "title": "Cálculo diferencial" },
+          { "value": "Ecuaciones diferenciales", "title": "Ecuaciones diferenciales" }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "Action.Submit",
+        "title": "Confirmar",
+        "data":
+        {
+          "submitLocation": "messagingExtensionFetchTask"
+        }
+      }
+    ]
+  }

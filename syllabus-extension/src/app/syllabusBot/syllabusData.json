@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Álgebra lineal",
+        "description": "Resolver problemas de Álgebra Lineal, mediante habilidades de cálculo básico y otras técnicas. Comunicar, tanto por escrito como de forma oral, conocimientos, procedimientos, resultados e ideas matemáticas. Desarrollar la capacidad de identificar y describir matemáticamente un problema, estructurar la información disponible y seleccionar un modelo adecuado. Aprender a hablar, demostrar y resolver en Matemáticas. Distinguir qué son las cosas de cómo se calculan. Alcanzar el juicio crítico necesario para distinguir entre una demostración correcta y otra que no lo es. Comenzar a enfrentarse a problemas que no son ejercicios.",
+        "content": [
+            "1. Sistemas de ecuaciones lineales. Matrices. Determinantes.",
+            "2. Espacios vectoriales. Espacios vectoriales euclídeos.",
+            "3. Aplicaciones lineales. Espacio dual.",
+            "4. Clasificación de endomorfismos. Forma de Jordan."
+        ],
+        "hours": "54",
+        "labs": "6"
+    },
+    {
+        "title": "Cálculo diferencial",
+        "description": "Resolver problemas de Cálculo Diferencial y aprender a comunicar, tanto por escrito como de forma oral, conocimientos, procedimientos y resultados matemáticos. Manejo de la topología en el espacio euclídeo. Cálculo de límites, derivadas parciales y diferencial de una función de varias variables reales. Estudio de extremos locales y extremos condicionados.",
+        "content": [
+            "Parte 1. Topología del espacio euclídeo (convergencia, compacidad, aplicaciones continuas, imagenes de conjuntos compactos y conexos, continuidad sobre compactos, continuidad uniforme, el teorema del punto fijo para aplicaciones contractivas). ",
+            "Parte 2. Aplicaciones diferenciables (representación matricial, condiciones suficientes de diferenciabilidad, regla de la cadena, teorema del valor medio, derivadas de orden superior, teorema de Taylor, aproximación, extremos locales). ",
+            "Parte 3. Teorema de la función inversa a implicita, extremos condicionados, multiplicadores de Lagrange."
+        ],
+        "hours": "60",
+        "labs": "3"
+    },
+    {
+        "title": "Geometría lineal",
+        "description": "Comprender y utilizar el lenguaje matemático. Adquirir la capacidad para enunciar proposiciones en este área y para construir demostraciones y para transmitir los conocimientos matemáticos adquiridos. Conocer demostraciones rigurosas de algunos teoremas clásicos. Asimilar la definición de un nuevo objeto matemático, en términos de otros ya conocidos, y ser capaz de utilizar este objeto en diferentes contextos.",
+        "content": [
+            "- Revisión de geometría afín.",
+            "- Geometría proyectiva: espacios proyectivos, subespacios proyectivos, aplicaciones proyectivas, homografías, sistemas de referencia proyectivos y coordenadas homogéneas, rectas en el plano proyectivo, dualidad, razón doble.",
+            "- Completado proyectivo de espacios afines.",
+            "- Cónicas proyectivas: aplicación al estudio de las cónicas afines. Introducción a las cuádricas."
+        ],
+        "hours": "30",
+        "labs": "3"
+    }
+]

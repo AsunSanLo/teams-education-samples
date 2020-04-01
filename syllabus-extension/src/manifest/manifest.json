@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "id": "c714c080-73f1-11ea-9ecc-f5e66ea34331",
+  "version": "0.0.1",
+  "packageName": "syllabusextension",
+  "developer": {
+    "name": "Plain Concepts",
+    "websiteUrl": "https://{{HOSTNAME}}",
+    "privacyUrl": "https://{{HOSTNAME}}/privacy.html",
+    "termsOfUseUrl": "https://{{HOSTNAME}}/tou.html"
+  },
+  "name": {
+    "short": "Compartir Temario",
+    "full": "Compartir Temario"
+  },
+  "description": {
+    "short": "TODO: add short description here",
+    "full": "TODO: add full description here"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [],
+  "staticTabs": [],
+  "bots": [],
+  "connectors": [],
+  "composeExtensions": [
+    {
+      "botId": "a6c46eac-6783-4a6a-ae36-9ad1fdfbe999",
+      "canUpdateConfiguration": false,
+      "commands": [
+        {
+          "id": "syllabusExpanderAction",
+          "type": "action",
+          "title": "Comunicar temario",
+          "description": "Publica los detalles del siguiente temario",
+          "context": [
+            "compose",
+            "message"
+          ],
+          "fetchTask": true
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "{{HOSTNAME}}"
+  ]
+}
