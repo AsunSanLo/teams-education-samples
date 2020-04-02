@@ -6,9 +6,9 @@
   "packageName": "syllabusextension",
   "developer": {
     "name": "Plain Concepts",
-    "websiteUrl": "https://{{HOSTNAME}}",
-    "privacyUrl": "https://{{HOSTNAME}}/privacy.html",
-    "termsOfUseUrl": "https://{{HOSTNAME}}/tou.html"
+    "websiteUrl": "https://conversationalbot.azurewebsites.net",
+    "privacyUrl": "https://conversationalbot.azurewebsites.net/privacy.html",
+    "termsOfUseUrl": "https://conversationalbot.azurewebsites.net/tou.html"
   },
   "name": {
     "short": "Compartir Temario",
@@ -63,6 +63,6 @@
     "messageTeamMembers"
   ],
   "validDomains": [
-    "{{HOSTNAME}}"
+    "conversationalbot.azurewebsites.net"
   ]
 }

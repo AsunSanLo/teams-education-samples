@@ -4,7 +4,10 @@ import {
     MessageFactory,
     MessagingExtensionAction,
     MessagingExtensionActionResponse,
-    CardFactory
+    CardFactory,
+    MessagingExtensionQuery,
+    MessagingExtensionAttachment,
+    MessagingExtensionResponse
 } from "botbuilder";
 
 import * as Util from "util";
@@ -17,6 +20,28 @@ export class SyllabusBot extends TeamsActivityHandler {
         super();
     }
 
+    protected handleTeamsMessagingExtensionQuery(context: TurnContext, query: MessagingExtensionQuery): Promise<MessagingExtensionResponse> {
+        // get the search query
+        let searchQuery = "";
+        if (query && query.parameters && query.parameters[0].name === "searchKeyword" && query.parameters[0].value) {
+            searchQuery = query.parameters[0].value.trim().toLowerCase();
+        }
+
+        let searchResultsCards: MessagingExtensionAttachment[] = [
+            CardFactory.heroCard("Álgebra lineal", "Resolver problemas de Álgebra Lineal, mediante habilidades de cálculo básico y otras técnicas. Comunicar, tanto por escrito como de forma oral, conocimientos, procedimientos, resultados e ideas matemáticas."),
+            CardFactory.heroCard("Álgebra de Boole","Resolver problemas de Cálculo Diferencial y aprender a comunicar, tanto por escrito como de forma oral, conocimientos, procedimientos y resultados matemáticos" ),
+        ];
+
+        let response: MessagingExtensionResponse = <MessagingExtensionResponse>{
+            composeExtension: {
+                type: "result",
+                attachmentLayout: "list",
+                attachments: searchResultsCards
+            }
+        };
+
+        return Promise.resolve(response);
+    }
 
     protected handleTeamsMessagingExtensionFetchTask(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
         const adaptiveCardSource: any = require("./syllabusSelectorCard.json");

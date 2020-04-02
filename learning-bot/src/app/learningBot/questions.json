@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "text": "¿Qué es un archipiélago?",
+        "answer": "Una archipiélago es una cadena o conjunto de islas. Estas vastas zonas de agua se encuentran situadas generalmente en mar abierto, es decir, es mucho menos frecuente encontrar a las mismas cerca de grandes masas de tierra firme.",
+        "syllabus": "Geografía"
+    },
+    {
+        "id": 2,
+        "text": "¿Qué son los solsticios?",
+        "answer": "Los solsticios son los momentos del año en los que el Sol alcanza su mayor o menor altura aparente en el cielo, y la duración del día o de la noche son las máximas del año, respectivamente",
+        "syllabus": "Geografía"
+    },
+    {
+        "id": 3,
+        "text": "¿Qué es el paleolítico y qué le caracteriza?",
+        "answer": "es el más antiguo de los períodos prehistóricos, es anterior al mesolítico, y se caracteriza por la fabricación y utilización de herramientas de piedra tallada, la práctica de la depredación (caza, pesca y recolección), el nomadismo y la aparición de las primeras manifestaciones artísticas, como son las pinturas rupestres y las esculturas de piedra o hueso.",
+        "syllabus": "Historia"
+    },
+    {
+        "id": 4,
+        "text": "¿Cuáles son las fechas de la Primera Guerra Mundial?",
+        "answer": "La Primera Guerra Mundial, anteriormente llamada la Gran Guerra, ​empezó el 28 de julio de 1914 y finalizó el 11 de noviembre de 1918, cuando Alemania aceptó las condiciones del armisticio",
+        "syllabus": "Historia"
+    },
+    {
+        "id": 5,
+        "text": "¿En qué unidad se mide la presión?",
+        "answer": "La presión se mide en Pascales",
+        "syllabus": "Ciencias"
+    },
+    {
+        "id": 5,
+        "text": "¿Qué es el módulo de un vector?",
+        "answer": "El módulo de un vector es el valor de la magnitud que representa.",
+        "syllabus": "Ciencias"
+    } 
+]
