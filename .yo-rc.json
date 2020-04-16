@@ -1,0 +1,10 @@
+{
+  "generator-teams": {
+    "promptValues": {
+      "developer": "Plain Concepts",
+      "unitTestsEnabled": false,
+      "useAzureAppInsights": false
+    },
+    "libraryName": "connectorSample"
+  }
+}

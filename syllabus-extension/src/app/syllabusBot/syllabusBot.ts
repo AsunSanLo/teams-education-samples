@@ -7,7 +7,8 @@ import {
     CardFactory,
     MessagingExtensionQuery,
     MessagingExtensionAttachment,
-    MessagingExtensionResponse
+    MessagingExtensionResponse,
+    AppBasedLinkQuery
 } from "botbuilder";
 
 import * as Util from "util";
@@ -20,6 +21,36 @@ export class SyllabusBot extends TeamsActivityHandler {
         super();
     }
 
+    protected handleTeamsAppBasedLinkQuery(context: TurnContext, query: AppBasedLinkQuery): Promise<MessagingExtensionResponse> {
+        const pastedUrl = query.url;
+        console.log("Pasted url!!");
+        
+        const adaptiveCardSource: any = require("./syllabusDetailCard.json");
+        const adaptiveCard = CardFactory.adaptiveCard(adaptiveCardSource);
+        console.log("ok adaptive Card!!")
+        // return Promise.resolve(<MessagingExtensionActionResponse>{
+        //     composeExtension: {
+        //         type: "result",
+        //         attachmentLayout: "list",
+        //         attachments: [adaptiveCard]
+        //     }
+        // });
+        
+        let searchResultsCards: MessagingExtensionAttachment[] = [
+            CardFactory.heroCard("Álgebra lineal", "Resolver problemas de Álgebra Lineal, mediante habilidades de cálculo básico y otras técnicas. Comunicar, tanto por escrito como de forma oral, conocimientos, procedimientos, resultados e ideas matemáticas."),
+        ];
+
+        let response: MessagingExtensionResponse = <MessagingExtensionResponse>{
+            composeExtension: {
+                type: "result",
+                attachmentLayout: "list",
+                attachments: searchResultsCards
+            }
+        };
+
+        return Promise.resolve(response);
+    }
+
     protected handleTeamsMessagingExtensionQuery(context: TurnContext, query: MessagingExtensionQuery): Promise<MessagingExtensionResponse> {
         // get the search query
         let searchQuery = "";
@@ -29,7 +60,7 @@ export class SyllabusBot extends TeamsActivityHandler {
 
         let searchResultsCards: MessagingExtensionAttachment[] = [
             CardFactory.heroCard("Álgebra lineal", "Resolver problemas de Álgebra Lineal, mediante habilidades de cálculo básico y otras técnicas. Comunicar, tanto por escrito como de forma oral, conocimientos, procedimientos, resultados e ideas matemáticas."),
-            CardFactory.heroCard("Álgebra de Boole","Resolver problemas de Cálculo Diferencial y aprender a comunicar, tanto por escrito como de forma oral, conocimientos, procedimientos y resultados matemáticos" ),
+            CardFactory.heroCard("Álgebra de Boole", "Resolver problemas de Boole y aprender a comunicar, tanto por escrito como de forma oral, conocimientos, procedimientos y resultados matemáticos"),
         ];
 
         let response: MessagingExtensionResponse = <MessagingExtensionResponse>{

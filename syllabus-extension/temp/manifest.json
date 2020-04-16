@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "c714c080-73f1-11ea-9ecc-f5e66ea34331",
-  "version": "0.0.4",
+  "version": "0.0.10",
   "packageName": "syllabusextension",
   "developer": {
     "name": "Plain Concepts",
@@ -15,14 +15,14 @@
     "full": "Compartir Temario"
   },
   "description": {
-    "short": "TODO: add short description here",
-    "full": "TODO: add full description here"
+    "short": "Información de los siguientes temarios disponibles",
+    "full": "Información de los siguientes temarios disponibles"
   },
   "icons": {
     "outline": "icon-outline.png",
     "color": "icon-color.png"
   },
-  "accentColor": "#D85028",
+  "accentColor": "#5ED7FF",
   "configurableTabs": [],
   "staticTabs": [],
   "bots": [],
@@ -55,6 +55,16 @@
             "title": "Temario"
           }]
         }
+      ],
+      "messageHandlers": [
+        {
+          "type": "link",
+          "value": {
+            "domains": [
+              "*.sharepoint.com"
+            ]
+          }
+        }
       ]
     }
   ],
@@ -63,6 +73,7 @@
     "messageTeamMembers"
   ],
   "validDomains": [
-    "conversationalbot.azurewebsites.net"
+    "conversationalbot.azurewebsites.net",
+    "*.sharepoint.com"
   ]
 }
